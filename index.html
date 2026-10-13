@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A to Z Stationery — Notebooks, Pens, Office Supplies & Printing</title>
+<meta name="description" content="A to Z Stationery: notebooks, pens, office stationery, registers, photocopy, printout, lamination, spiral binding and passport size photos.">
+<style>
+:root{--ink:#1d2340;--brand:#3b4cca;--accent:#ff9f1c;--pink:#ef476f;--mint:#06d6a0;--bg:#fbf9f4;--card:#fff;--mut:#5b6078}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:Segoe UI,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:9;background:rgba(251,249,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e8e4d8}
+nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:800;font-size:1.3rem}.logo b{color:var(--brand)}.logo i{color:var(--accent);font-style:normal}
+nav ul{display:flex;gap:26px;list-style:none}nav ul a{font-weight:600;color:var(--mut)}nav ul a:hover{color:var(--brand)}
+.btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 24px;border-radius:999px;font-weight:700;box-shadow:0 6px 18px rgba(59,76,202,.3);transition:.2s;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{transform:translateY(-2px)}.btn.alt{background:#fff;color:var(--brand);box-shadow:inset 0 0 0 2px var(--brand)}
+#menu{display:none;background:none;border:0;font-size:1.7rem}
+.slider{position:relative;overflow:hidden;border-radius:0 0 32px 32px;color:#fff}
+.slide{display:none;padding:80px 0;min-height:430px;align-items:center}.slide.on{display:flex;animation:f .7s}
+@keyframes f{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+.slide .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+.s1{background:linear-gradient(120deg,#2b3aa8,#5a6bff)}.s2{background:linear-gradient(120deg,#e0457b,#ff9f1c)}.s3{background:linear-gradient(120deg,#05a37c,#3b4cca)}
+.slide h1{font-size:clamp(2rem,4.5vw,3.3rem);line-height:1.15;margin-bottom:14px}.slide p{opacity:.92;margin-bottom:24px;max-width:480px}
+.slide .btn{background:#fff;color:var(--ink);box-shadow:none}
+.dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
+.dots span{width:10px;height:10px;border-radius:50%;background:#fff6;cursor:pointer}.dots .on{background:#fff;width:28px;border-radius:6px}
+section{padding:70px 0}h2{font-size:2rem;text-align:center;margin-bottom:8px}.sub{text-align:center;color:var(--mut);margin-bottom:38px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:var(--card);border-radius:20px;padding:24px;box-shadow:0 8px 28px rgba(29,35,64,.07);transition:.25s}.card:hover{transform:translateY(-6px)}
+.card svg{width:100%;height:130px;margin-bottom:12px;border-radius:12px}.card h3{margin-bottom:6px}.card p{color:var(--mut);font-size:.94rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.tags span{background:#eef0ff;color:var(--brand);font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px}
+.tint{background:#fff}.svc .card{text-align:center}.ico{font-size:2.2rem}
+.page{display:none}.page.on{display:block}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about p{color:var(--mut);margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.stats div{background:#fff;border-radius:16px;padding:16px;text-align:center;box-shadow:0 6px 20px rgba(29,35,64,.06)}.stats b{display:block;font-size:1.6rem;color:var(--brand)}
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}.filters button{border:0;padding:9px 18px;border-radius:999px;background:#fff;font-weight:600;cursor:pointer;box-shadow:0 2px 8px #0001}.filters .on{background:var(--brand);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}.gal div{border-radius:18px;overflow:hidden;position:relative;aspect-ratio:1;transition:.25s}.gal div:hover{transform:scale(1.03)}
+.gal svg{width:100%;height:100%}.gal em{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:linear-gradient(transparent,#000a);color:#fff;font-style:normal;font-weight:600;font-size:.9rem}
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:30px}.box{background:#fff;border-radius:22px;padding:30px;box-shadow:0 8px 28px rgba(29,35,64,.07)}
+.box li{list-style:none;margin:14px 0;display:flex;gap:12px}.box li span{font-size:1.4rem}
+input,textarea{width:100%;padding:13px 15px;border:1.5px solid #dcdff0;border-radius:12px;margin-bottom:14px;font:inherit}input:focus,textarea:focus{outline:0;border-color:var(--brand)}
+footer{background:var(--ink);color:#c9cdea;padding:44px 0 20px;margin-top:30px}.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}footer h4{color:#fff;margin-bottom:10px}footer a{display:block;margin:5px 0}.cp{text-align:center;font-size:.85rem;margin-top:28px;opacity:.7}
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 8px 20px #0004;z-index:9}
+@media(max-width:800px){nav ul{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 24px;gap:14px}nav ul.open{display:flex}#menu{display:block}
+.slide .wrap,.about,.contact,.fg{grid-template-columns:1fr}.slide svg{max-height:200px}}
+</style></head><body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home" onclick="go('home')"><b>A</b> to <i>Z</i> Stationery</a>
+<button id="menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+<ul id="nl"><li><a href="#home" onclick="go('home')">Home</a></li><li><a href="#about" onclick="go('about')">About Us</a></li><li><a href="#gallery" onclick="go('gallery')">Gallery</a></li><li><a href="#contact" onclick="go('contact')">Contact Us</a></li></ul>
+</nav></div></header>
+
+<!-- HOME -->
+<main id="home" class="page on">
+<div class="slider">
+<div class="slide s1 on"><div class="wrap"><div><h1>Everything you write with, from A to Z</h1><p>Notebooks, pens, registers and office essentials — all under one roof, at honest prices.</p><a class="btn" href="#products">Explore Products</a></div>
+<svg viewBox="0 0 300 220"><rect x="60" y="30" width="130" height="165" rx="10" fill="#fff" transform="rotate(-8 125 110)"/><rect x="60" y="30" width="22" height="165" rx="6" fill="#ff9f1c" transform="rotate(-8 125 110)"/><g stroke="#c9cdf5" stroke-width="3" transform="rotate(-8 125 110)"><path d="M100 70h75M100 90h75M100 110h75M100 130h60"/></g><rect x="170" y="40" width="14" height="150" rx="7" fill="#06d6a0" transform="rotate(28 177 115)"/><path d="M164 185l7 22 7-22z" fill="#1d2340" transform="rotate(28 177 115)"/></svg></div></div>
+<div class="slide s2"><div class="wrap"><div><h1>Back-to-school &amp; office ready</h1><p>A4, F5 and A5 notebooks, ink pens, files, staplers and more — stocked all year round.</p><a class="btn" href="#products">Shop Notebooks</a></div>
+<svg viewBox="0 0 300 220"><rect x="40" y="90" width="120" height="100" rx="8" fill="#fff"/><rect x="40" y="75" width="60" height="22" rx="6" fill="#fff"/><rect x="150" y="60" width="100" height="130" rx="8" fill="#ffd166"/><circle cx="200" cy="125" r="22" fill="#fff" opacity=".7"/><rect x="95" y="40" width="10" height="80" rx="5" fill="#3b4cca" transform="rotate(-20 100 80)"/></svg></div></div>
+<div class="slide s3"><div class="wrap"><div><h1>Print, copy, laminate &amp; bind</h1><p>Photocopy, colour &amp; black/white printouts, lamination, spiral binding and passport size photos — quick and neat.</p><a class="btn" href="#services">Our Services</a></div>
+<svg viewBox="0 0 300 220"><rect x="60" y="90" width="180" height="85" rx="14" fill="#fff"/><rect x="85" y="40" width="130" height="60" rx="4" fill="#e8ebff"/><rect x="95" y="140" width="110" height="46" rx="3" fill="#fff" stroke="#3b4cca" stroke-width="3"/><circle cx="220" cy="115" r="7" fill="#06d6a0"/></svg></div></div>
+<div class="dots"><span class="on"></span><span></span><span></span></div></div>
+
+<section id="products"><div class="wrap"><h2>Our Products</h2><p class="sub">Handpicked stationery for students, offices and homes</p><div class="grid">
+<div class="card"><svg viewBox="0 0 200 130"><rect width="200" height="130" fill="#eef0ff"/><rect x="60" y="15" width="80" height="100" rx="6" fill="#3b4cca"/><rect x="60" y="15" width="12" height="100" fill="#2b3aa8"/><rect x="85" y="40" width="40" height="8" rx="4" fill="#fff"/></svg><h3>Notebooks</h3><p>Smooth, durable paper for school, college and office use.</p><div class="tags"><span>A4 Size</span><span>F5 Size</span><span>A5 Size</span></div></div>
+<div class="card"><svg viewBox="0 0 200 130"><rect width="200" height="130" fill="#fff3e0"/><rect x="30" y="58" width="140" height="14" rx="7" fill="#ff9f1c" transform="rotate(-25 100 65)"/><path d="M150 30l14 8-6 12z" fill="#1d2340"/><rect x="40" y="86" width="120" height="10" rx="5" fill="#06d6a0" transform="rotate(-10 100 90)"/></svg><h3>Pens</h3><p>Smooth-writing ink (cartridge) pens and trusted brands.</p><div class="tags"><span>Ink / Cartridge</span><span>Hero</span><span>Parker</span><span>Reynolds</span></div></div>
+<div class="card"><svg viewBox="0 0 200 130"><rect width="200" height="130" fill="#e6fbf4"/><rect x="45" y="30" width="110" height="80" rx="6" fill="#06d6a0"/><rect x="45" y="22" width="50" height="14" rx="4" fill="#05a37c"/><circle cx="100" cy="72" r="9" fill="#fff"/></svg><h3>Files &amp; Folders</h3><p>Keep every paper organised and safe.</p><div class="tags"><span>Box File</span><span>Office File</span><span>Diary</span><span>Punching Machine</span></div></div>
+<div class="card"><svg viewBox="0 0 200 130"><rect width="200" height="130" fill="#ffe8ef"/><rect x="40" y="30" width="120" height="25" rx="5" fill="#ef476f"/><rect x="50" y="60" width="100" height="14" rx="4" fill="#3b4cca"/><rect x="55" y="82" width="26" height="30" rx="4" fill="#ffd166"/><rect x="95" y="82" width="26" height="30" rx="4" fill="#06d6a0"/></svg><h3>Office Essentials</h3><p>Everything on the desk, from stapler to scissors.</p><div class="tags"><span>Stapler</span><span>Calculator</span><span>Glue Stick</span><span>Pencil</span><span>Cello Tape</span><span>Brown / White Tape</span><span>Whiteliner</span><span>Highlighter</span><span>Stamp Pad</span><span>Pen Stand</span><span>Scissors</span></div></div>
+<div class="card"><svg viewBox="0 0 200 130"><rect width="200" height="130" fill="#fffbe6"/><rect x="40" y="40" width="30" height="60" rx="5" fill="#1d2340"/><rect x="85" y="40" width="30" height="60" rx="5" fill="#ef476f"/><rect x="130" y="40" width="30" height="60" rx="5" fill="#3b4cca"/></svg><h3>Markers</h3><p>Bold, clear and long-lasting colours.</p><div class="tags"><span>Permanent Marker</span><span>White Board Marker</span><span>CD/DVD Marker</span></div></div>
+<div class="card"><svg viewBox="0 0 200 130"><rect width="200" height="130" fill="#f1eaff"/><rect x="35" y="35" width="130" height="70" rx="4" fill="#fff" stroke="#3b4cca" stroke-width="3"/><path d="M35 35l65 40 65-40" fill="none" stroke="#3b4cca" stroke-width="3"/></svg><h3>Envelopes</h3><p>For courier, offices and special occasions.</p><div class="tags"><span>Courier Envelope</span><span>Shaadi Envelope</span></div></div>
+<div class="card"><svg viewBox="0 0 200 130"><rect width="200" height="130" fill="#e8f4ff"/><rect x="50" y="20" width="100" height="95" rx="6" fill="#3b4cca"/><rect x="62" y="20" width="76" height="95" fill="#fff"/><path d="M72 45h56M72 62h56M72 79h40" stroke="#c9cdf5" stroke-width="4"/></svg><h3>Registers</h3><p>Strong-bound registers for shops and offices.</p><div class="tags"><span>Attendance Register</span><span>Register</span><span>POS Roll</span></div></div>
+</div></div></section>
+
+<section id="services" class="tint svc"><div class="wrap"><h2>Printing &amp; Photo Services</h2><p class="sub">Fast, neat and affordable — while you wait</p><div class="grid">
+<div class="card"><div class="ico">📠</div><h3>Photocopy</h3><p>Sharp copies in all sizes.</p></div>
+<div class="card"><div class="ico">🖨️</div><h3>Printout</h3><p>Colour and black &amp; white printing.</p></div>
+<div class="card"><div class="ico">🛡️</div><h3>Lamination</h3><p>Protect documents and certificates.</p></div>
+<div class="card"><div class="ico">📚</div><h3>Spiral Binding</h3><p>Reports, notes and projects, neatly bound.</p></div>
+<div class="card"><div class="ico">🪪</div><h3>Passport Size Photo</h3><p>Quick photos for forms and IDs.</p></div>
+</div></div></section>
+</main>
+
+<!-- ABOUT -->
+<main id="about" class="page"><section><div class="wrap"><h2>About Us</h2><p class="sub">Your neighbourhood stationery store</p>
+<div class="about"><div><p>A to Z Stationery is a one-stop shop for everything you need to learn, write, organise and print. From a single pencil to a full office setup, we stock quality products at fair prices.</p><p>Our friendly team helps students, professionals and businesses find the right item quickly — and our printing, lamination and binding services save you a trip elsewhere.</p>
+<div class="stats"><div><b>A–Z</b>Range</div><div><b>100+</b>Products</div><div><b>5★</b>Service</div></div></div>
+<svg viewBox="0 0 400 300" style="width:100%;border-radius:24px"><rect width="400" height="300" fill="#eef0ff"/><rect x="40" y="110" width="320" height="150" rx="10" fill="#fff"/><path d="M30 110h340l-20-50H50z" fill="#3b4cca"/><path d="M50 60h60l-5 50H30zM110 60h60l-2 50h-60zM170 60h60v50h-60zM230 60h60l7 50h-65zM290 60h60l20 50h-75z" fill="#ff9f1c" opacity=".85"/><rect x="170" y="170" width="60" height="90" rx="4" fill="#3b4cca"/><rect x="60" y="150" width="90" height="60" rx="6" fill="#e8ebff"/><rect x="250" y="150" width="90" height="60" rx="6" fill="#e8ebff"/><text x="200" y="40" text-anchor="middle" font-size="26" font-weight="800" fill="#1d2340">A to Z Stationery</text></svg></div></div></section></main>
+
+<!-- GALLERY -->
+<main id="gallery" class="page"><section><div class="wrap"><h2>Gallery</h2><p class="sub">A look at what we offer (replace with your real shop photos)</p>
+<div class="filters"><button class="on" data-f="all">All</button><button data-f="nb">Notebooks</button><button data-f="pen">Pens</button><button data-f="off">Office</button></div>
+<div class="gal" id="gal"></div></div></section></main>
+
+<!-- CONTACT -->
+<main id="contact" class="page"><section><div class="wrap"><h2>Contact Us</h2><p class="sub">Visit us or send a message — we reply quickly</p>
+<div class="contact"><div class="box"><h3>Get in touch</h3><ul>
+<li><span>👤</span><div><b>Bharat Vaishnav</b><br>Owner</div></li>
+<li><span>📞</span><div><a href="tel:+918829999924">+91 88299 99924</a></div></li>
+<li><span>✉️</span><div><a href="mailto:bharatvaishnav9324@gmail.com">bharatvaishnav9324@gmail.com</a></div></li>
+<li><span>📍</span><div>A to Z Stationery, Udaipur, Rajasthan</div></li></ul></div>
+<div class="box"><h3 style="margin-bottom:14px">Send a message</h3><input id="n" placeholder="Your name"><input id="p" placeholder="Phone number"><textarea id="m" rows="4" placeholder="What are you looking for?"></textarea><button class="btn" onclick="wa()">Send on WhatsApp</button></div></div></div></section></main>
+
+<footer><div class="wrap"><div class="fg"><div><h4>A to Z Stationery</h4><p>Notebooks, pens, office supplies, printing and more — everything from A to Z.</p></div>
+<div><h4>Pages</h4><a href="#home" onclick="go('home')">Home</a><a href="#about" onclick="go('about')">About Us</a><a href="#gallery" onclick="go('gallery')">Gallery</a><a href="#contact" onclick="go('contact')">Contact Us</a></div>
+<div><h4>Contact</h4><a href="tel:+918829999924">+91 88299 99924</a><a href="mailto:bharatvaishnav9324@gmail.com">Email us</a></div></div>
+<p class="cp">© 2026 A to Z Stationery. All rights reserved.</p></div></footer>
+<a class="wa" href="https://wa.me/918829999924" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id===id));document.getElementById('nl').classList.remove('open');window.scrollTo(0,0)}
+addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(['home','about','gallery','contact'].includes(h))go(h)});
+if(['about','gallery','contact'].includes(location.hash.slice(1)))go(location.hash.slice(1));
+let i=0;const S=document.querySelectorAll('.slide'),D=document.querySelectorAll('.dots span');
+function show(n){i=n;S.forEach((s,k)=>s.classList.toggle('on',k===n));D.forEach((d,k)=>d.classList.toggle('on',k===n))}
+D.forEach((d,k)=>d.onclick=()=>show(k));setInterval(()=>show((i+1)%S.length),5000);
+const items=[['nb','A4 Notebooks','#3b4cca'],['nb','A5 Notebooks','#ef476f'],['nb','F5 Notebooks','#06d6a0'],['pen','Ink Pens','#ff9f1c'],['pen','Cartridge Pens','#2b3aa8'],['pen','Markers','#ef476f'],['off','Box Files','#05a37c'],['off','Staplers','#3b4cca'],['off','Registers','#ff9f1c'],['off','Envelopes','#8d6bff']];
+const g=document.getElementById('gal');
+g.innerHTML=items.map(([t,l,c],k)=>`<div data-t="${t}"><svg viewBox="0 0 200 200"><defs><linearGradient id="g${k}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="#1d2340"/></linearGradient></defs><rect width="200" height="200" fill="url(#g${k})"/><circle cx="${40+k*15}" cy="50" r="30" fill="#fff" opacity=".12"/><rect x="62" y="48" width="76" height="100" rx="8" fill="#fff" opacity=".92" transform="rotate(${k%2?6:-6} 100 100)"/><path d="M76 80h48M76 98h48M76 116h30" stroke="${c}" stroke-width="5" stroke-linecap="round" transform="rotate(${k%2?6:-6} 100 100)"/></svg><em>${l}</em></div>`).join('');
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');g.querySelectorAll('div').forEach(d=>d.style.display=(b.dataset.f==='all'||d.dataset.t===b.dataset.f)?'':'none')});
+function wa(){const t=`Hello A to Z Stationery, I'm ${n.value} (${p.value}). ${m.value}`;open('https://wa.me/918829999924?text='+encodeURIComponent(t),'_blank')}
+</script></body></html>
